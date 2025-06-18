@@ -36,12 +36,15 @@ export const StepOptionsMenu: React.FC<StepOptionsMenuProps> = ({
   return (
     <div
       ref={menuRef}
-      className="fixed z-50 bg-white rounded-lg shadow-lg border border-gray-200 py-1 min-w-[160px]"
+      className="fixed z-50 bg-white rounded-lg shadow-lg border border-gray-200 py-1 min-w-[200px]"
       style={{
         top: y,
         left: x,
       }}
     >
+      <div className="px-4 pt-3 pb-2 border-b border-gray-100 font-semibold text-[15px] text-gray-900">
+        Settings
+      </div>
       <button
         onClick={onSetFirst}
         className="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 flex items-center gap-2"
@@ -70,6 +73,7 @@ export const StepOptionsMenu: React.FC<StepOptionsMenuProps> = ({
         <img src="/icons/duplicate.png" alt="" className="w-4 h-4" />
         Duplicate
       </button>
+      <div className="border-t border-gray-100 mx-4 my-2" />
       <button
         onClick={onDelete}
         className="w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-gray-100 flex items-center gap-2"
